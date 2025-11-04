@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Work and No Play...</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>All Work and No Play...</h1>
+            <p class="curator-caption">Curated by Jordan Medina</p>
+        </div>
+        <div class="header-controls">
+            <button class="info-btn" id="artworkBtn">Artwork</button>
+            <button class="info-btn" id="curatorialBtn">Curatorial Statement</button>
+            <button class="info-btn" id="pressBtn">Press</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="artist-buttons" id="artistButtons">
+            <!-- Artist buttons will be populated dynamically -->
+        </div>
+
+        <div class="gallery-container">
+            <button class="nav-arrow nav-arrow-left" id="prevBtn" aria-label="Previous artwork">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <div class="gallery" id="gallery">
+                <!-- Artwork items will be populated here -->
+            </div>
+            <button class="nav-arrow nav-arrow-right" id="nextBtn" aria-label="Next artwork">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+            <div class="gallery-counter" id="galleryCounter">
+                <span id="currentIndex">1</span> / <span id="totalCount">10</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Full Screen Artwork Modal -->
+    <div id="artworkModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Artwork">
+                <div class="artwork-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalArtist"></p>
+                    <p id="modalYear"></p>
+                    <p id="modalMedium"></p>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Curatorial Submission Modal -->
+    <div id="curatorialModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div id="curatorialContent">
+                    <p>Enter your curatorial submission information here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Press Release Modal -->
+    <div id="pressModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div id="pressContent">
+                    <p>Enter your press release information here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artwork Info Modal -->
+    <div id="artworkInfoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div id="artworkInfoContent">
+                    <p>Artwork information will be displayed here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
